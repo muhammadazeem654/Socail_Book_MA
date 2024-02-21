@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b4290460d9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">
+            <img src="socialbook_img/images/logo.png" class="logo" alt="LOGO">
+        </a>
+            <ul>
+                <li><img src="socialbook_img/images/notification.png" onclick="toggleNotificationMenu()" alt="notification-icon" >
+                    <div class="toast">Notifications</div>
+                </li>
+                <li>
+                    
+                        <img src="socialbook_img/images/inbox.png" alt="inbox-icon">
+                    
+                    <div class="toast">Messages</div>
+                </li>
+                <li>
+                    <a href="video.html">
+                    <img src="socialbook_img/images/video.png" alt="video-icon">
+                </a>
+                    <div class="toast">Videos</div>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="socialbook_img/images/search.png" alt="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="socialbook_img/images/profile-pic.png" alt="profile-image">
+            </div>
+        </div>
+        <!-- Settings-menu  -->
+
+        <div class="settings-menu">
+
+            <div id="dark-btn">
+                <span></span>
+            </div>
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                    <div>
+                        <p>Muhammad Azeem</p>
+                        <a href="profile.html">See your profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="user-profile">
+                    <img src="socialbook_img/images/feedback.png" alt="Profile-image">
+                    <div>
+                        <p>Give Feedback</p>
+                        <a href="#">Help us to improve the new design</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="settings-links">
+                    <img src="socialbook_img/images/setting.png" class="settings-icon" alt="setting image">
+                    <a href="#">Settings & Privacy <img src="socialbook_img/images/arrow.png" width="10px" alt="Arrow image"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="socialbook_img/images/help.png" class="settings-icon" alt="setting image">
+                    <a href="#">Help & Support <img src="socialbook_img/images/arrow.png" width="10px" alt="Arrow image"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="socialbook_img/images/display.png" class="settings-icon" alt="setting image">
+                    <a href="#">Display & Accessibility <img src="socialbook_img/images/arrow.png" width="10px" alt="Arrow image"></a>
+                </div>
+                <div class="settings-links">
+                    <img src="socialbook_img/images/logout.png" class="settings-icon" alt="setting image">
+                    <a href="#">LogOut <img src="socialbook_img/images/arrow.png" width="10px" alt="Arrow image"></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==========NOTIFICATIONS============ -->
+        
+            <!-- Notification menu -->
+            <div id="notification-container">
+            <div id="notification-menu">
+                <label>
+                    <h1>Notifications</h1>
+                    <hr>
+                    <button onclick="showAll()">All</button>
+                </label>
+                    <button onclick="showUnread()">Unread</button>
+                
+                <div id="notifications">
+                    <!-- Notifications will be added here dynamically -->
+                </div>
+            </div>
+        </div>
+    
+     
+
+    </nav>
+
+
+     
+
+      <div class="container">
+ <!-- LEFT-SIDEBAR -->
+
+      <div class="left-sidebar">
+        <div class="imp-links">
+            <h1>Videos</h1>
+            <br>
+            <div class="video-search-box">
+                <img src="socialbook_img/images/search.png" alt="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <a href="#"><img src="socialbook_img/images/news.png" alt="New-image"> Latest  News</a>
+            <a href="#"><img src="socialbook_img/images/friends.png" alt="freinds-image"> Freinds</a>
+            <a href="#"><img src="socialbook_img/images/group.png" alt="Group-image"> Group</a>
+            <a href="#"><img src="socialbook_img/images/marketplace.png" alt="marketplace-image"> Marketplace</a>
+            <a href="video.html"><img src="socialbook_img/images/watch.png" alt="watched-image"> watch</a>
+            <a href="#">See More</a>
+        </div>
+        <div class="shortcut-links">
+            <p>Your Shorcuts</p>
+            <a href="#"><img src="socialbook_img/images/shortcut-1.png" alt="Shortcut1"> Web Developers</a>
+            <a href="#"><img src="socialbook_img/images/shortcut-2.png" alt="Shortcut2"> Web Disgn Course</a>
+            <a href="#"><img src="socialbook_img/images/shortcut-3.png" alt="Shortcut3"> Full Stack Development</a>
+            <a href="#"><img src="socialbook_img/images/shortcut-4.png" alt="Shortcut4"> Websites Expert</a>
+        </div>
+        <div class="shortcut-links-market">
+            <p>Catogories</p>
+            <a href="#"><img src="socialbook_img/images/car-icon-removebg-preview.png" alt="Shortcut1"> Vehicles</a>
+            <a href="#"><img src="socialbook_img/images/298-2983402_who-should-purchase-a-home-warranty-home-warranty-icon-removebg-preview.png" alt="Shortcut2"> Property Rentals</a>
+            <a href="#"><img src="socialbook_img/images/2237214-removebg-preview.png" alt="Shortcut3"> Apparel</a>
+            <a href="#"><img src="socialbook_img/images/594-5949045_transparent-verified-logo-png-png-download-removebg-preview.png" alt="Shortcut4"> Classifields</a>
+            <a href="#"><img src="socialbook_img/images/iphone-icon-png-mobile-clip-art-smart-phone-11563653635uruiaxvz05-removebg-preview.png" alt="Shortcut4"> Electronics</a>
+            <a href="#"><img src="socialbook_img/images//323af00f48e9d7fc8dc6a7801c80962f-removebg-preview.png" alt="Shortcut4"> Entertainment</a>
+            <a href="#"><img src="socialbook_img/images/images-removebg-preview.png" alt="Shortcut4"> Family</a>
+            <a href="#"><img src="socialbook_img/images/188976-removebg-preview.png" alt="Shortcut4"> Free Stuff</a>
+        </div>
+    </div>
+
+<!-- ===MAIn COntainer ========= -->
+
+    <div class="card-container">
+        <div class="card">
+            <img src="socialbook_img/images/386774767-240x180.jpeg" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/397639986-240x180.jpeg" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X  pta prove </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/386774767-240x180.jpeg" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+
+        <!-- Add more cards as needed -->
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+
+        <!-- Add more cards as needed -->
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+
+        <!-- Add more cards as needed -->
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+        <div class="card">
+            <img src="socialbook_img/images/display.png" alt="Card Image 1">
+        </div>
+        <div class="card-content">
+            <h3>Rs 3700</h3>
+            <p>Iphone X non pta fu </p>
+            <small>Islamabad, Pakistan</small>
+        </div>
+
+
+        <!-- Add more cards as needed -->
+    </div>
+
+</body>
+
+    
+        
+</div>
+    
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
