@@ -6,14 +6,13 @@
     <title>SocialBook_Websites</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/b4290460d9.js" crossorigin="anonymous"></script>
-    
 </head>
 <body>
 
     <nav>
         <div class="nav-left">
             <a href="index.html">
-            <img src="socialbook_img/images/logo.png" class="logo" alt="LOGO">
+            <img src="socialbook_img/images/MuhammadSphere__2_-removebg-preview.png" class="logo" alt="LOGO">
         </a>
             <ul>
                 <li><img src="socialbook_img/images/notification.png" id="notification-image" onclick="toggleNotificationMenu()" alt="notification-icon" >
@@ -29,6 +28,13 @@
                 </a>
                     
                 </li>
+                <li class="market-icon">
+                    <a href="marketplace.html">
+                    <img src="socialbook_img/images/Untitled (3).png" alt="video-icon">
+                    <div class="toast">Markey Place</div>
+                </a>
+                    
+                </li>
             </ul>
         </div>
         <div class="nav-right">
@@ -37,7 +43,7 @@
                 <input type="text" placeholder="Search">
             </div>
             <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-                <img src="socialbook_img/images/profile-pic.png" alt="profile-image">
+                <img src="socialbook_img/images/WhatsApp Image 2023-06-12 at 13.11.05.jpg" alt="profile-image">
             </div>
         </div>
         <!-- Settings-menu  -->
@@ -49,7 +55,7 @@
             </div>
             <div class="settings-menu-inner">
                 <div class="user-profile">
-                    <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                    <img src="socialbook_img/images/WhatsApp Image 2023-06-12 at 13.11.05.jpg" alt="Profile-image">
                     <div>
                         <p>Muhammad Azeem</p>
                         <a href="profile.html">See your profile</a>
@@ -60,9 +66,23 @@
                     <img src="socialbook_img/images/feedback.png" alt="Profile-image">
                     <div>
                         <p>Give Feedback</p>
-                        <a href="#">Help us to improve the new design</a>
+                        <a href="#" id="feedback-link">Help us to improve the new design</a>
                     </div>
                 </div>
+                
+                <!-- Modal -->
+                <div id="feedback-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h1>Give FeedBack To SocailBook</h1>
+                        <div class="feedback-button">
+                            <button id="feedback-socialbook-btn">Help us to improve SocailBook</button>
+                            <button id="feedback-wrong-btn">Something is wrong</button>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- ======modal end======= -->
                 <hr>
                 <div class="settings-links">
                     <img src="socialbook_img/images/setting.png" class="settings-icon" alt="setting image">
@@ -86,7 +106,7 @@
         <!-- ==========NOTIFICATIONS============ -->
         
             <!-- Notification menu -->
-            <div id="notification-container">
+            <!-- <div id="notification-container"> -->
             <div id="notification-menu">
                 <label>
                     <h1>Notifications</h1>
@@ -99,7 +119,7 @@
                     <!-- Notifications will be added here dynamically -->
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     
      
 
@@ -109,18 +129,25 @@
         <!-- LEFT-SIDEBAR -->
 
         <div class="left-sidebar">
-            <div class="imp-links">
-                <a href="#"><img src="socialbook_img/images/news.png" alt="New-image"> Latest  News</a>
-                <a href="#"><img src="socialbook_img/images/friends.png" alt="freinds-image"> Freinds</a>
+            <div class="imp-links" id="impLinks">
+                <a href="#"><img src="socialbook_img/images/news.png" alt="New-image"> Latest News</a>
+                <a href="#"><img src="socialbook_img/images/friends.png" alt="freinds-image"> Friends</a>
                 <a href="#"><img src="socialbook_img/images/group.png" alt="Group-image"> Group</a>
                 <a href="marketplace.html"><img src="socialbook_img/images/marketplace.png" alt="marketplace-image"> Marketplace</a>
-                <a href="video.html"><img src="socialbook_img/images/watch.png" alt="watched-image"> watch</a>
-                <a href="#">See More</a>
+                <a href="video.html"><img src="socialbook_img/images/watch.png" alt="watched-image"> Watch</a>
+            <div class="hidden" id="additionalLinks">
+                    <a href="#"><img src="socialbook_img/images/news.png" alt="New-image"> Latest News</a>
+                <a href="#"><img src="socialbook_img/images/friends.png" alt="freinds-image"> Friends</a>
+                <a href="#"><img src="socialbook_img/images/group.png" alt="Group-image"> Group</a>
+                <a href="marketplace.html"><img src="socialbook_img/images/marketplace.png" alt="marketplace-image"> Marketplace</a>
+                <a href="video.html"><img src="socialbook_img/images/watch.png" alt="watched-image"> Watch</a>
+                </div>
+                <a href="#" class="seeMoreLink" id="seeMoreLink">See More</a>
             </div>
             <div class="shortcut-links">
-                <p>Your Shorcuts</p>
+                <p>Your Shortcuts</p>
                 <a href="#"><img src="socialbook_img/images/shortcut-1.png" alt="Shortcut1"> Web Developers</a>
-                <a href="#"><img src="socialbook_img/images/shortcut-2.png" alt="Shortcut2"> Web Disgn Course</a>
+                <a href="#"><img src="socialbook_img/images/shortcut-2.png" alt="Shortcut2"> Web Design Course</a>
                 <a href="#"><img src="socialbook_img/images/shortcut-3.png" alt="Shortcut3"> Full Stack Development</a>
                 <a href="#"><img src="socialbook_img/images/shortcut-4.png" alt="Shortcut4"> Websites Expert</a>
             </div>
@@ -155,205 +182,367 @@
             <div class="write-post-container">
                 <div class="user-profile">
                     <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
-                    <div>
+                    <div class="dropdown">
                         <p>Muhammad Azeem</p>
-                        <small>Public <i class="fa-solid fa-caret-down"></i></small>
+                        <small class="dropdown-toggle">Public <i class="fa-solid fa-caret-down"></i></small>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Only for me</a>
+                            <a href="#" class="dropdown-item">Friends Only</a>
+                            <a href="#" class="dropdown-item">Public</a>
+                        </div>
                     </div>
+                    
+                    
                 </div>
 
                 <div class="post-input-container">
-                    <textarea rows="3" placeholder="What's on your mind, Muhammad?"></textarea>
+                    <textarea id="post-text" rows="3" placeholder="What's on your mind, Muhammad?"></textarea>
+                    <button id="post-button">Post</button>
                     <div class="add-post-links">
-                        <a href="#"><img src="socialbook_img/images/live-video.png" alt="Video"> Live Video</a>
-                        <a href="#"><img src="socialbook_img/images/photo.png" alt="Video"> Photo/Video</a>
-                        <a href="#"><img src="socialbook_img/images/feeling.png" alt="Video"> Feeling/Activity</a>
+                        <a href="#" id="live-video-link"><img src="socialbook_img/images/live-video.png" alt="Video"> Live Video</a>
+                        <a href="#" id="photo-video-link"><img src="socialbook_img/images/photo.png" alt="Video"> Photo/Video</a>
+                        <a href="#" id="feeling-activity-link"><img src="socialbook_img/images/feeling.png" alt="Video"> Feeling/Activity</a>
                     </div>
-                </div>             
+                </div>
+                
+                
+                
+                         
             </div>
 
-            <div class="post-container">
+            
+            <div class="post-container" id="postContainer1">
                 <div class="post-row">
                     <div class="user-profile">
-                        <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                        <a href="profile.html">
+                            <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                        </a>
                         <div>
                             <p>Muhammad Azeem</p>
                             <span>October 12 2024, 13:40 pm</span>
                         </div>
                     </div>
-                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    <div class="dropdown">
+                        <a href="#" class="ellipse"><i class="fas fa-ellipsis-v"></i></a>
+                        <div class="ellipse-dropdown-menu">
+                            <a href="#" class="ellipse-dropdown-item">Report</a>
+                            <a href="#" class="ellipse-dropdown-item">Save</a>
+                        </div>
+                    </div>
                 </div>
-
-                <p class="post-text">Subscribe <span>@Muhammad Azeem</span> on Linkdein for website development and UI designs. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456">#Facebook Profile</a></p>
+                
+            
+                <p class="post-text">Subscribe <span>@Muhammad Azeem</span> on LinkedIn for website development and UI designs. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456">#Facebook Profile</a></p>
                 <img src="socialbook_img/images/feed-image-1.png" class="post-img" alt="feed-image">
-
+            
                 <div class="post-row">
                     <div class="activity-icons">
-                       <div><img src="socialbook_img/images/like-blue.png" alt="like button"> 120</div>
-                       <div><img src="socialbook_img/images/comments.png" alt="comments button"> 45</div>
-                       <div><img src="socialbook_img/images/share.png" alt="share button"> 15</div>
-                       </div>
-
-                    <div class="post-profile-icon">
-                        <img src="socialbook_img/images/profile-pic.png" alt="profile image"><i class="fa-solid fa-caret-down"></i>
+                       <div><i class="fas fa-thumbs-up like-icon" id="likeBtn"></i><span class="like-count">120</span></div>
+                       <div><i class="fas fa-comment commentBtn"></i> <span class="comment-count">25</span></div>
+                       <div><img src="socialbook_img/images/share.png" alt="share button"> <span class="share-count">5</span></div>
                     </div>
+                    <div class="post-profile-icon" id="profileIcon">
+                        <img src="socialbook_img/images/profile-pic.png" alt="profile image">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                    
+                    <div class="caret-dropdown" id="caretDropdown">
+                        <!-- Dropdown content goes here -->
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                    
+                </div>
+                <div class="comment-dummy-container">
+                    <div class="comment-container">
+                        <img src="socialbook_img/images/profile-pic.png" alt="User profile image">
+                    </div>
+                    <div class="dummy-comment">
+                        <p>This is a dummy comment.</p>
+                        <span>February 1, 2024</span>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <textarea class="commentInput" placeholder="Write a comment..."></textarea>
+                    <button class="postCommentBtn">Post</button>
                 </div>
             </div>
-
-
-            <div class="post-container">
+            <div class="post-container" id="postContainer2" >
                 <div class="post-row">
                     <div class="user-profile">
-                        <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                        <a href="profile.html">
+                            <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                        </a>
                         <div>
                             <p>Muhammad Azeem</p>
-                            <span>January 3 2024, 13:40 pm</span>
+                            <span>October 12 2024, 13:40 pm</span>
                         </div>
                     </div>
-                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    <div class="dropdown">
+                        <a href="#" class="ellipse"><i class="fas fa-ellipsis-v"></i></a>
+                        <div class="ellipse-dropdown-menu">
+                            <a href="#" class="ellipse-dropdown-item">Report</a>
+                            <a href="#" class="ellipse-dropdown-item">Save</a>
+                        </div>
+                    </div>
                 </div>
-
-                <p class="post-text">Like and share this video with freinds, tag <span>@Muhammad Azeem</span> facebook page on your post. Ask your doubts in the comments. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456">#Facebook Profile</a></p>
+            
+                <p class="post-text">Subscribe <span>@Muhammad Azeem</span> on LinkedIn for website development and UI designs. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456">#Facebook Profile</a></p>
                 <img src="socialbook_img/images/feed-image-2.png" class="post-img" alt="feed-image">
-
+            
                 <div class="post-row">
                     <div class="activity-icons">
-                       <div><img src="socialbook_img/images/like.png" alt="like button"> 100</div>
-                       <div><img src="socialbook_img/images/comments.png" alt="comments button"> 82</div>
-                       <div><img src="socialbook_img/images/share.png" alt="share button"> 5</div>
-                       </div>
-
+                       <div><i class="fas fa-thumbs-up like-icon" id="likeBtn"></i><span class="like-count">120</span></div>
+                       <div><i class="fas fa-comment commentBtn"></i> <span class="comment-count">25</span></div>
+                       <div><img src="socialbook_img/images/share.png" alt="share button"> <span class="share-count">5</span></div>
+                    </div>
                     <div class="post-profile-icon">
                         <img src="socialbook_img/images/profile-pic.png" alt="profile image"><i class="fa-solid fa-caret-down"></i>
                     </div>
+                </div>
+                <div class="comment-dummy-container">
+                    <div class="comment-container">
+                        <img src="socialbook_img/images/profile-pic.png" alt="User profile image">
+                    </div>
+                    <div class="dummy-comment">
+                        <p>This is a dummy comment.</p>
+                        <span>February 1, 2024</span>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <textarea class="commentInput" placeholder="Write a comment..."></textarea>
+                    <button class="postCommentBtn">Post</button>
                 </div>
             </div>
-            <div class="post-container">
+            <div class="post-container" id="postContainer3">
                 <div class="post-row">
                     <div class="user-profile">
-                        <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                        <a href="profile.html">
+                            <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                        </a>                    
                         <div>
                             <p>Muhammad Azeem</p>
-                            <span>January 3 2024, 13:40 pm</span>
+                            <span>October 12 2024, 13:40 pm</span>
                         </div>
                     </div>
-                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    <div class="dropdown">
+                        <a href="#" class="ellipse"><i class="fas fa-ellipsis-v"></i></a>
+                        <div class="ellipse-dropdown-menu">
+                            <a href="#" class="ellipse-dropdown-item">Report</a>
+                            <a href="#" class="ellipse-dropdown-item">Save</a>
+                        </div>
+                    </div>
                 </div>
-
-                <p class="post-text">Like and share this video with freinds, tag <span>@Muhammad Azeem</span> facebook page on your post. Ask your doubts in the comments. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456">#Facebook Profile</a></p>
-                <img src="socialbook_img/images/feed-image-3.png" class="post-img" alt="feed-image">
-
+            
+                <p class="post-text">Like and share this video with freinds, tag <span>@Muhammad Azeem</span> facebook page on yourr post. Ask your doubts in the comments. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456">#Facebook Profile</a></p>
+                <img src="socialbook_img/images/feed-image-1.png" class="post-img" alt="feed-image">
+            
                 <div class="post-row">
                     <div class="activity-icons">
-                       <div><img src="socialbook_img/images/like.png" alt="like button"> 100</div>
-                       <div><img src="socialbook_img/images/comments.png" alt="comments button"> 82</div>
-                       <div><img src="socialbook_img/images/share.png" alt="share button"> 5</div>
-                       </div>
-
+                       <div><i class="fas fa-thumbs-up like-icon" id="likeBtn"></i><span class="like-count">120</span></div>
+                       <div><i class="fas fa-comment commentBtn"></i> <span class="comment-count">25</span></div>
+                       <div><img src="socialbook_img/images/share.png" alt="share button"> <span class="share-count">5</span></div>
+                    </div>
                     <div class="post-profile-icon">
                         <img src="socialbook_img/images/profile-pic.png" alt="profile image"><i class="fa-solid fa-caret-down"></i>
                     </div>
+                </div>
+                <div class="comment-dummy-container">
+                    <div class="comment-container">
+                        <img src="socialbook_img/images/profile-pic.png" alt="User profile image">
+                    </div>
+                    <div class="dummy-comment">
+                        <p>This is a dummy comment.</p>
+                        <span>February 1, 2024</span>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <textarea class="commentInput" placeholder="Write a comment..."></textarea>
+                    <button class="postCommentBtn">Post</button>
                 </div>
             </div>
-            <div class="post-container">
+            <div class="post-container" id="postContainer4">
                 <div class="post-row">
                     <div class="user-profile">
-                        <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                        <a href="profile.html">
+                            <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                        </a>
                         <div>
                             <p>Muhammad Azeem</p>
-                            <span>January 3 2024, 13:40 pm</span>
+                            <span>October 12 2024, 13:40 pm</span>
                         </div>
                     </div>
-                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    <div class="dropdown">
+                        <a href="#" class="ellipse"><i class="fas fa-ellipsis-v"></i></a>
+                        <div class="ellipse-dropdown-menu">
+                            <a href="#" class="ellipse-dropdown-item">Report</a>
+                            <a href="#" class="ellipse-dropdown-item">Save</a>
+                        </div>
+                    </div>
                 </div>
-
-                <p class="post-text">Like and share this video with freinds, tag <span>@Muhammad Azeem</span> facebook page on your post. Ask your doubts in the comments. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456">#Facebook Profile</a></p>
-                <img src="socialbook_img/images/feed-image-4.png" class="post-img" alt="feed-image">
-
+            
+                <p class="post-text">Subscribe <span>@Muhammad Azeem</span> on LinkedIn for website development and UI designs. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456">#Facebook Profile</a></p>
+                <img src="socialbook_img/images/feed-image-1.png" class="post-img" alt="feed-image">
+            
                 <div class="post-row">
                     <div class="activity-icons">
-                       <div><img src="socialbook_img/images/like.png" alt="like button"> 100</div>
-                       <div><img src="socialbook_img/images/comments.png" alt="comments button"> 82</div>
-                       <div><img src="socialbook_img/images/share.png" alt="share button"> 5</div>
-                       </div>
-
+                       <div><i class="fas fa-thumbs-up like-icon" id="likeBtn"></i><span class="like-count">120</span></div>
+                       <div><i class="fas fa-comment commentBtn"></i> <span class="comment-count">25</span></div>
+                       <div><img src="socialbook_img/images/share.png" alt="share button"> <span class="share-count">5</span></div>
+                    </div>
                     <div class="post-profile-icon">
                         <img src="socialbook_img/images/profile-pic.png" alt="profile image"><i class="fa-solid fa-caret-down"></i>
                     </div>
+                </div>
+                <div class="comment-dummy-container">
+                    <div class="comment-container">
+                        <img src="socialbook_img/images/profile-pic.png" alt="User profile image">
+                    </div>
+                    <div class="dummy-comment">
+                        <p>This is a dummy comment.</p>
+                        <span>February 1, 2024</span>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <textarea class="commentInput" placeholder="Write a comment..."></textarea>
+                    <button class="postCommentBtn">Post</button>
                 </div>
             </div>
-            <div class="post-container">
+            <div class="post-container" id="postContainer5">
                 <div class="post-row">
                     <div class="user-profile">
+                        <a href="profile.html">
                         <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                    </a>
                         <div>
                             <p>Muhammad Azeem</p>
-                            <span>January 3 2024, 13:40 pm</span>
+                            <span>October 12 2024, 13:40 pm</span>
                         </div>
                     </div>
-                    <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                    <div class="dropdown">
+                        <a href="#" class="ellipse"><i class="fas fa-ellipsis-v"></i></a>
+                        <div class="ellipse-dropdown-menu">
+                            <a href="#" class="ellipse-dropdown-item">Report</a>
+                            <a href="#" class="ellipse-dropdown-item">Save</a>
+                        </div>
+                    </div>
                 </div>
-
-                <p class="post-text">Like and share this video with freinds, tag <span>@Muhammad Azeem</span> facebook page on your post. Ask your doubts in the comments. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456vg">#Facebook Profile</a></p>
-                <img src="socialbook_img/images/feed-image-5.png" class="post-img" alt="feed-image">
-
+            
+                <p class="post-text">Like and share this video with freinds, tag <span>@Muhammad Azeem</span> facebook page on yourr post. Ask your doubts in the comments. <a href="https://www.instagram.com/raoazeem1/">#Muhammad Azeem</a> <a href="https://www.facebook.com/profile.php?id=100016556509456">#Facebook Profile</a></p>
+                <img src="socialbook_img/images/feed-image-1.png" class="post-img" alt="feed-image">
+            
                 <div class="post-row">
                     <div class="activity-icons">
-                       <div><img src="socialbook_img/images/like.png" alt="like button"> 100</div>
-                       <div><img src="socialbook_img/images/comments.png" alt="comments button"> 82</div>
-                       <div><img src="socialbook_img/images/share.png" alt="share button"> 5</div>
-                       </div>
-
+                       <div><i class="fas fa-thumbs-up like-icon" id="likeBtn"></i><span class="like-count">120</span></div>
+                       <div><i class="fas fa-comment commentBtn"></i> <span class="comment-count">25</span></div>
+                       <div><img src="socialbook_img/images/share.png" alt="share button"> <span class="share-count">5</span></div>
+                    </div>
                     <div class="post-profile-icon">
                         <img src="socialbook_img/images/profile-pic.png" alt="profile image"><i class="fa-solid fa-caret-down"></i>
                     </div>
+                </div>
+                <div class="comment-dummy-container">
+                    <div class="comment-container">
+                        <img src="socialbook_img/images/profile-pic.png" alt="User profile image">
+                    </div>
+                    <div class="dummy-comment">
+                        <p>This is a dummy comment.</p>
+                        <span>February 1, 2024</span>
+                    </div>
+                </div>
+                <div class="comment-section">
+                    <textarea class="commentInput" placeholder="Write a comment..."></textarea>
+                    <button class="postCommentBtn">Post</button>
                 </div>
             </div>
 
             <button type="button" class="load-more-btn">Load More</button>
+            <div class="spinner-container">
+              <div class="spinner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+            <div class="message" style="display: none;">This page does not support this action.</div>
+            
 
         </div>
-
+        
+        <!-- <div class="visme_d" data-title="Untitled Project" data-url="y40d9z1z-untitled-project?sidebar=true" data-domain="forms" data-full-page="false" data-min-height="600px" data-form-id="41901"></div><script src="https://static-bundles.visme.co/forms/vismeforms-embed.js"></script> -->
         <!-- RIGHT-SIDEBAR  -->
 
         <div class="right-sidebar">
             <div class="sidebar-sec">
-            <div class="sidebar-tittle">
-                <h4>Events</h4>
-                <a href="#">See All</a>
-            </div>
-            <div class="event">
-                <div class="left-event">
-                    <h3>18</h3>
-                    <span>March</span>
+                <div class="sidebar-tittle">
+                    <h4>Events</h4>
+                    <a href="#" id="seeAllEventsLink">See All</a>
                 </div>
-                <div class="right-event">
-                    <h4>Social Media</h4>
-                    <p><i class="fa-solid fa-location-dot"></i>Tariq Road</p>
-                    <a href="#">More Info</a>
+                
+                <div class="event">
+                    <div class="left-event">
+                        <h3>18</h3>
+                        <span>March</span>
+                    </div>
+                    <div class="right-event">
+                        <h4>Social Media</h4>
+                        <p><i class="fa-solid fa-location-dot"></i>Tariq Road</p>
+                        <a href="#">More Info</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="event">
-                <div class="left-event">
-                    <h3>12</h3>
-                    <span>October</span>
+                
+                <div class="event">
+                    <div class="left-event">
+                        <h3>12</h3>
+                        <span>October</span>
+                    </div>
+                    <div class="right-event">
+                        <h4>Birthday Month</h4>
+                        <p><i class="fa-solid fa-location-dot"></i>Karachi, Pakistan</p>
+                        <a href="#">More Info</a>
+                    </div>
                 </div>
-                <div class="right-event">
-                    <h4>Birthday Month</h4>
-                    <p><i class="fa-solid fa-location-dot"></i>Karachi, Pakistan</p>
-                    <a href="#">More Info</a>
+                
+                <div class="hidden" id="moreEvents">
+                    <!-- Additional events can be added here  -->
+                    <div class="event">
+                        <div class="left-event">
+                            <h3>25</h3>
+                            <span>December</span>
+                        </div>
+                        <div class="right-event">
+                            <h4>Christmas</h4>
+                            <p><i class="fa-solid fa-location-dot"></i>Worldwide</p>
+                            <a href="#">More Info</a>
+                        </div>
+                    </div>
+                    <div class="event">
+                        <div class="left-event">
+                            <h3>31</h3>
+                            <span>December</span>
+                        </div>
+                        <div class="right-event">
+                            <h4>New Year's Eve</h4>
+                            <p><i class="fa-solid fa-location-dot"></i>Global</p>
+                            <a href="#">More Info</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                
 
             <div class="sidebar-tittle">
                 <h4>Advertisment</h4>
-                <a href="#">Close</a>
+                <a href="#" id="toggleAdvertisement">Close</a>
             </div>
-            <img src="socialbook_img/images/advertisement.png" class="sidebar-ads" alt="Advertisment">
+            <img src="socialbook_img/images/advertisement.png" class="sidebar-ads" id="advertisementImage" alt="Advertisment">
 
             <div class="sidebar-tittle">
                 <h4>Conversation</h4>
-                <a href="#">Hide Chat</a>
+                <a href="#" id="toggleChat">Hide Chat</a>
             </div>
 
             <div class="online-list">
@@ -378,31 +567,31 @@
                 <div class="online">
                     <img src="socialbook_img/images/member-3.png" alt="member-img">
                 </div>
-                <p>Bisma Ahmed</p>
+                <p>Misbah Kazmi</p>
             </div>
             <div class="online-list">
                 <div class="online">
                     <img src="socialbook_img/images/member-3.png" alt="member-img">
                 </div>
-                <p>Bisma Ahmed</p>
+                <p>Hujeefa Azeem</p>
             </div>
             <div class="online-list">
                 <div class="online">
                     <img src="socialbook_img/images/member-3.png" alt="member-img">
                 </div>
-                <p>Bisma Ahmed</p>
+                <p>Nayab Elahi</p>
             </div>
             <div class="online-list">
                 <div class="online">
                     <img src="socialbook_img/images/member-3.png" alt="member-img">
                 </div>
-                <p>Bisma Ahmed</p>
+                <p>Summaiya Altaf</p>
             </div>
             <div class="online-list">
                 <div class="online">
                     <img src="socialbook_img/images/member-3.png" alt="member-img">
                 </div>
-                <p>Bisma Ahmed</p>
+                <p>Aly Raza</p>
             </div>
 
         </div>
@@ -414,6 +603,8 @@
     </div>
 
     <script src="script.js"></script>
+ 
+
 
 </body>
 </html>
