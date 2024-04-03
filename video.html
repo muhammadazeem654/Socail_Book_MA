@@ -31,6 +31,13 @@
                     <div class="toast">Videos</div>
                 </a>
                 </li>
+                <li class="market-icon">
+                    <a href="marketplace.html">
+                    <img src="socialbook_img/images/Untitled (3).png" alt="video-icon">
+                    <div class="toast">Markey Place</div>
+                </a>
+                    
+                </li>
             </ul>
         </div>
         <div class="nav-right">
@@ -39,7 +46,7 @@
                 <input type="text" placeholder="Search">
             </div>
             <div class="nav-user-icon online" onclick="settingsMenuToggle()">
-                <img src="socialbook_img/images/profile-pic.png" alt="profile-image">
+                <img src="socialbook_img/images/WhatsApp Image 2023-06-12 at 13.11.05.jpg" alt="profile-image">
             </div>
         </div>
         <!-- Settings-menu  -->
@@ -51,7 +58,7 @@
             </div>
             <div class="settings-menu-inner">
                 <div class="user-profile">
-                    <img src="socialbook_img/images/profile-pic.png" alt="Profile-image">
+                    <img src="socialbook_img/images/WhatsApp Image 2023-06-12 at 13.11.05.jpg" alt="Profile-image">
                     <div>
                         <p>Muhammad Azeem</p>
                         <a href="profile.html">See your profile</a>
@@ -88,7 +95,7 @@
         <!-- ==========NOTIFICATIONS============ -->
         
             <!-- Notification menu -->
-            <div id="notification-container">
+            <!-- <div id="notification-container"> -->
             <div id="notification-menu">
                 <label>
                     <h1>Notifications</h1>
@@ -101,7 +108,7 @@
                     <!-- Notifications will be added here dynamically -->
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
     
      
 
@@ -126,7 +133,15 @@
             <a href="#"><img src="socialbook_img/images/group.png" alt="Group-image"> Group</a>
             <a href="marketplace.html"><img src="socialbook_img/images/marketplace.png" alt="marketplace-image"> Marketplace</a>
             <a href="video.html"><img src="socialbook_img/images/watch.png" alt="watched-image"> watch</a>
-            <a href="#">See More</a>
+            
+            <div class="hidden" id="additionalLinks">
+                <a href="#"><img src="socialbook_img/images/news.png" alt="New-image"> Latest News</a>
+            <a href="#"><img src="socialbook_img/images/friends.png" alt="freinds-image"> Friends</a>
+            <a href="#"><img src="socialbook_img/images/group.png" alt="Group-image"> Group</a>
+            <a href="marketplace.html"><img src="socialbook_img/images/marketplace.png" alt="marketplace-image"> Marketplace</a>
+            <a href="video.html"><img src="socialbook_img/images/watch.png" alt="watched-image"> Watch</a>
+            </div>
+            <a href="#" class="seeMoreLink" id="seeMoreLink">See More</a>
         </div>
         <div class="shortcut-links">
             <p>Your Shorcuts</p>
@@ -150,7 +165,13 @@
                         <span>October 12 2024, 13:40 pm</span>
                     </div>
                 </div>
-                <a href="#"><i class="fas fa-ellipsis-v"></i></a>
+                <div class="dropdown">
+                        <a href="#" class="ellipse"><i class="fas fa-ellipsis-v"></i></a>
+                        <div class="ellipse-dropdown-menu">
+                            <a href="#" class="ellipse-dropdown-item">Report</a>
+                            <a href="#" class="ellipse-dropdown-item">Save</a>
+                        </div>
+                    </div>
             </div>
 
             <p class="post-text">Subscribe <span>@Muhammad Azeem</span> on Linkdein for website development and UI designs. <a href="#">#Muhammad Azeem</a> <a href="#">#Facebook Profile</a></p>
@@ -161,8 +182,8 @@
 
             <div class="post-row">
                 <div class="activity-icons">
-                   <div><img src="socialbook_img/images/like-blue.png" alt="like button"> 120</div>
-                   <div><img src="socialbook_img/images/comments.png" alt="comments button"> 45</div>
+                    <div><i class="fas fa-thumbs-up like-icon" id="likeBtn"></i><span class="like-count">120</span></div>
+                    <div><i class="fas fa-comment" ></i> 45</div>
                    <div><img src="socialbook_img/images/share.png" alt="share button"> 15</div>
                    </div>
 
@@ -193,8 +214,8 @@
 
             <div class="post-row">
                 <div class="activity-icons">
-                   <div><img src="socialbook_img/images/like.png" alt="like button"> 100</div>
-                   <div><img src="socialbook_img/images/comments.png" alt="comments button"> 82</div>
+                    <div><i class="fas fa-thumbs-up like-icon" id="likeBtn"></i><span class="like-count">120</span></div>
+                    <div><i class="fas fa-comment" ></i> 45</div>
                    <div><img src="socialbook_img/images/share.png" alt="share button"> 5</div>
                    </div>
 
@@ -223,8 +244,8 @@
 
             <div class="post-row">
                 <div class="activity-icons">
-                   <div><img src="socialbook_img/images/like.png" alt="like button"> 100</div>
-                   <div><img src="socialbook_img/images/comments.png" alt="comments button"> 82</div>
+                    <div><i class="fas fa-thumbs-up like-icon" id="likeBtn"></i><span class="like-count">120</span></div>
+                    <div><i class="fas fa-comment" ></i> 45</div>
                    <div><img src="socialbook_img/images/share.png" alt="share button"> 5</div>
                    </div>
 
@@ -253,8 +274,8 @@
 
             <div class="post-row">
                 <div class="activity-icons">
-                   <div><img src="socialbook_img/images/like.png" alt="like button"> 100</div>
-                   <div><img src="socialbook_img/images/comments.png" alt="comments button"> 82</div>
+                    <div><i class="fas fa-thumbs-up like-icon" id="likeBtn"></i><span class="like-count">120</span></div>
+                    <div><i class="fas fa-comment" ></i> 45</div>
                    <div><img src="socialbook_img/images/share.png" alt="share button"> 5</div>
                    </div>
 
@@ -283,8 +304,8 @@
 
             <div class="post-row">
                 <div class="activity-icons">
-                   <div><img src="socialbook_img/images/like.png" alt="like button"> 100</div>
-                   <div><img src="socialbook_img/images/comments.png" alt="comments button"> 82</div>
+                    <div><i class="fas fa-thumbs-up like-icon" id="likeBtn2"></i><span class="like-count">120</span></div>
+                    <div><i class="fas fa-comment" ></i> 45</div>
                    <div><img src="socialbook_img/images/share.png" alt="share button"> 5</div>
                    </div>
 
@@ -309,3 +330,11 @@
 <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
