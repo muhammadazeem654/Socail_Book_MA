@@ -34,7 +34,7 @@ nav {
     z-index: 100;
 }
 .logo {
-    width: 160px;
+    width: 140px;
     margin-right: 45px;
 }
 .nav-left, .nav-right {
@@ -726,16 +726,16 @@ nav {
         display: none;
     }
     .logo{
-        width: 110px;
-        margin-right: 20px;
+        width: 100px;
+        margin-right: 15px;
     }
     .nav-left ul li img {
         width: 20px;
         margin: 0 8px;
     }
     .nav-user-icon img {
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
     }
     .nav-user-icon {
         margin-left: 0;
